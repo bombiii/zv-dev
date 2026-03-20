@@ -74,11 +74,11 @@
 .marquee {
   display: flex;
   width: max-content;
-  animation: marquee-left 25s linear infinite;
+  animation: marquee-left 40s linear infinite;
 }
 
 .marquee--reverse {
-  animation: marquee-right 25s linear infinite;
+  animation: marquee-right 40s linear infinite;
 }
 
 .marquee::after {

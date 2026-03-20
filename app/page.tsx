@@ -1,11 +1,48 @@
 import { AuroraBackground } from "@/components/ui/aurora-background"
 import { Button } from "@/components/ui/button"
-import { SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiPython } from "react-icons/si"
+
+        {/* Icons */}
+
+import {
+  SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiTailwindcss,
+  SiPython, SiDocker, SiGit, SiLinux, SiGithubactions,
+  SiHtml5, SiCss, SiSass, SiChakraui, SiStorybook, SiJest, SiTestinglibrary, SiVite
+} from "react-icons/si";
+
+const row1 = [
+  { Icon: SiJavascript, label: "JavaScript", color: "text-yellow-400" },
+  { Icon: SiTypescript, label: "TypeScript", color: "text-blue-500" },
+  { Icon: SiReact, label: "React", color: "text-cyan-400" },
+  { Icon: SiNextdotjs, label: "Next.js", color: "text-slate-100" },
+  { Icon: SiNodedotjs, label: "Node.js", color: "text-green-500" },
+  { Icon: SiTailwindcss, label: "Tailwind CSS", color: "text-cyan-400" },
+  { Icon: SiCss, label: "CSS", color: "text-blue-500" },
+];
+
+const row2 = [
+  { Icon: SiPython, label: "Python", color: "text-blue-400" },
+  { Icon: SiDocker, label: "Docker", color: "text-blue-500" },
+  { Icon: SiGit, label: "Git", color: "text-orange-500" },
+  { Icon: SiLinux, label: "Linux", color: "text-yellow-200" },
+  { Icon: SiGithubactions, label: "CI/CD", color: "text-blue-400" },
+  { Icon: SiHtml5, label: "HTML5", color: "text-orange-500" },
+  { Icon: SiVite, label: "Vite", color: "text-purple-500" },
+];
+
+const MarqueeContent = ({ items }: { items: typeof row1 }) => (
+  <div className="flex items-center gap-8 pr-8">
+    {items.map((item, idx) => (
+      <div key={idx} className="flex w-52 shrink-0 items-center gap-3 text-lg font-semibold tracking-wide text-slate-200">
+        <item.Icon className={`text-3xl ${item.color}`} />
+        <span className="truncate">{item.label}</span>
+      </div>
+    ))}
+  </div>
+);
 
 export default function Page() {
   return (
     <AuroraBackground>
-      {/* Scrollable Wrapper: This prevents AuroraBackground from hiding your lower content */}
       <div className="absolute inset-0 h-full w-full overflow-y-auto overflow-x-hidden">
         
         {/* Hero Section */}
@@ -22,49 +59,27 @@ export default function Page() {
         </div>
 
         {/* Marquee Section */}
-        <section className="relative overflow-hidden py-10 pb-20">
-          <div className="mx-auto w-full max-w-6xl space-y-6 px-6">
-            <p className="text-xl uppercase tracking-widest text-slate-300">
+        <section className="relative overflow-hidden border-t border-white/15 py-10 pb-20">
+          <div className="mx-auto w-full max-w-6xl space-y-8 px-6">
+            <p className="text-sm uppercase tracking-widest text-slate-300">
               Languages & tools
             </p>
 
             {/* Row 1: Left Scrolling */}
-            <div className="flex h-12 items-center overflow-hidden rounded-lg bg-white/10 text-slate-50 border border-white/15 ring-1 ring-indigo-300/30 backdrop-blur-sm">
+            <div className="flex h-14 items-center overflow-hidden rounded-lg text-slate-50 relative mask-image-gradient">
               <div className="marquee">
-                <span className="whitespace-nowrap pr-8 text-lg font-semibold tracking-wide">
-                  JavaScript &nbsp;&nbsp; TypeScript &nbsp;&nbsp; React &nbsp;&nbsp; Next.js &nbsp;&nbsp; Node.js &nbsp;&nbsp; Express &nbsp;&nbsp; GraphQL &nbsp;&nbsp; Tailwind CSS
-                </span>
-                {/* Duplicated span for seamless loop */}
-                <span className="whitespace-nowrap pr-8 text-lg font-semibold tracking-wide">
-                  JavaScript &nbsp;&nbsp; TypeScript &nbsp;&nbsp; React &nbsp;&nbsp; Next.js &nbsp;&nbsp; Node.js &nbsp;&nbsp; Express &nbsp;&nbsp; GraphQL &nbsp;&nbsp; Tailwind CSS
-                </span>
+                <MarqueeContent items={row1} />
+                <MarqueeContent items={row1} />
               </div>
             </div>
 
             {/* Row 2: Right Scrolling */}
-            <div className="flex h-12 items-center overflow-hidden rounded-lg bg-white/10 text-slate-50 border border-white/15 ring-1 ring-indigo-300/30 backdrop-blur-sm">
+            <div className="flex h-14 items-center overflow-hidden rounded-lg text-slate-50 relative mask-image-gradient">
               <div className="marquee marquee--reverse">
-                <span className="whitespace-nowrap pr-8 text-lg font-semibold tracking-wide">
-                  Python &nbsp;&nbsp; Django &nbsp;&nbsp; Flask &nbsp;&nbsp; PostgreSQL &nbsp;&nbsp; Docker &nbsp;&nbsp; Git &nbsp;&nbsp; Linux &nbsp;&nbsp; CI/CD
-                </span>
-                <span className="whitespace-nowrap pr-8 text-lg font-semibold tracking-wide">
-                  Python &nbsp;&nbsp; Django &nbsp;&nbsp; Flask &nbsp;&nbsp; PostgreSQL &nbsp;&nbsp; Docker &nbsp;&nbsp; Git &nbsp;&nbsp; Linux &nbsp;&nbsp; CI/CD
-                </span>
+                <MarqueeContent items={row2} />
+                <MarqueeContent items={row2} />
               </div>
             </div>
-
-            {/* Row 3: Left Scrolling */}
-            <div className="flex h-12 items-center overflow-hidden rounded-lg bg-white/10 text-slate-50 border border-white/15 ring-1 ring-indigo-300/30 backdrop-blur-sm">
-              <div className="marquee">
-                <span className="whitespace-nowrap pr-8 text-lg font-semibold tracking-wide">
-                  HTML5 &nbsp;&nbsp; CSS3 &nbsp;&nbsp; SASS &nbsp;&nbsp; Chakra UI &nbsp;&nbsp; Storybook &nbsp;&nbsp; Jest &nbsp;&nbsp; Testing Library &nbsp;&nbsp; Vite
-                </span>
-                <span className="whitespace-nowrap pr-8 text-lg font-semibold tracking-wide">
-                  HTML5 &nbsp;&nbsp; CSS3 &nbsp;&nbsp; SASS &nbsp;&nbsp; Chakra UI &nbsp;&nbsp; Storybook &nbsp;&nbsp; Jest &nbsp;&nbsp; Testing Library &nbsp;&nbsp; Vite
-                </span>
-              </div>
-            </div>
-
           </div>
         </section>
 
