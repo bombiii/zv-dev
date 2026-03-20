@@ -66,7 +66,7 @@ export default function Page() {
         <section className="relative overflow-hidden border-t border-white/15 py-10 pb-20">
           <div className="mx-auto w-full max-w-6xl space-y-8 px-6">
             <p className="text-sm uppercase tracking-widest text-slate-300">
-              Nyelvek és eszközök
+              Nyelvek és technológiák
             </p>
 
             {/* Row 1: Left Scrolling */}
