@@ -1,5 +1,7 @@
 import { AuroraBackground } from "@/components/ui/aurora-background"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { CanvasText } from "@/components/ui/canvas-text"
 
 import {
   SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiTailwindcss,
@@ -48,14 +50,33 @@ const MarqueeRow = ({ items, reverse = false }: { items: typeof row1, reverse?: 
 export default function Page() {
   return (
     <AuroraBackground>
+      <ThemeToggle />
       <div className="absolute inset-0 h-full w-full overflow-y-auto overflow-x-hidden">
         
         <div className="flex w-full min-h-screen items-center justify-start p-6 md:pl-30 animate-startup-hero">
           <div className="flex w-full max-w-5xl flex-col items-start justify-start gap-6 rounded-lg text-left">
-            <h1 className="text-7xl font-bold text-indigo-200">Varga Zsombor</h1>
-            <h2 className="-mt-5 text-4xl text-indigo-200/20">Software Developer | Web Developer</h2>
-            <div className="flex w-3xl border border-slate-400"></div>
-            <p className="text-slate-200">
+            <CanvasText
+              text="Varga Zsombor"
+              className="text-2xl font-bold md:text-4xl lg:text-6xl"
+              backgroundClassName="bg-blue-700 dark:bg-indigo-200"
+              colors={[
+                "rgba(0, 153, 255, 1)",
+                "rgba(0, 153, 255, 0.9)",
+                "rgba(0, 153, 255, 0.8)",
+                "rgba(0, 153, 255, 0.7)",
+                "rgba(0, 153, 255, 0.6)",
+                "rgba(0, 153, 255, 0.5)",
+                "rgba(0, 153, 255, 0.4)",
+                "rgba(0, 153, 255, 0.3)",
+                "rgba(0, 153, 255, 0.2)",
+                "rgba(0, 153, 255, 0.1)",
+              ]}
+              lineGap={4}
+              animationDuration={20}
+            />
+            <h2 className="-mt-5 text-4xl text-black/30 dark:text-indigo-200/20">Software Developer | Web Developer</h2>
+            <div className="flex w-3xl border border-slate-400 dark:border-slate-400"></div>
+            <p className="text-slate-600 dark:text-slate-200">
               Fedezd fel a projektjeimet, ahol a kreativitás és a technológia találkozik.
             </p>
             <Button variant="default">Projektek megtekintése</Button>
