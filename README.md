@@ -8,22 +8,26 @@
 - Szeretek tiszta, jól tesztelt kódot írni és felhasználói élményt javítani
 
 ## 🛠️ Tech stack
-- **Frontend:** HTML, CSS, JavaScript, TypeScript, React, Vue, 
+- **Frontend:** JavaScript, TypeScript, React, Next.js, Tailwind CSS, CSS, HTML5, Vite
 - **Backend:** Node.js, Python
-- **Adatbázis:** PostgreSQL, MongoDB, SQLite
-- **DevOps / Eszközök:** Git, GitHub, Docker, Figma
+- **Szoftver Fejlesztés:** C#, WPF
+- **DevOps / Eszközök:** Git, GitHub, Docker, Figma, Linux
 
 ## 🚀 Fő projektek
 
-### 1) [vzs](https://github.com/bombiii/portfolio)
-- Leírás: Egy saját portfólió 
-- Fő technológiák:
-- Eredmény:
+### 1) zv – Portfolio
 
-### 2) [projekt-neve](link)
-- Leírás:
-- Fő technológiák:
-- Eredmény:
+- **Leírás:** Saját fejlesztésű, modern webes portfólió, amely bemutatja a projektjeimet, készségeimet és tapasztalataimat.
+- **Fő technológiák:** TypeScript, React (Next.js), Tailwind CSS
+- **Funkciók:**
+  - Reszponzív design (mobil / desktop)
+  - Gyors betöltés (Next.js optimalizációk)
+  - Modern UI animációk
+  - Projekt lista és részletes nézet
+- **Eredmény:** 
+  - Saját online jelenlét kialakítása
+  - Frontend fejlesztési készségek demonstrálása
+  - Valós projektek bemutatása egy letisztult felületen
 
 ## 🎯 Cél
 - Keresek junior/mid szintű frontend/backend pozíciót
@@ -33,7 +37,3 @@
 ## 📬 Kapcsolat
 - Email: zsomborvarga077@gmail.com
 - GitHub: https://github.com/bombiii
-
-## 📚 Egyéb
-- Blog: 
-- CV: 
