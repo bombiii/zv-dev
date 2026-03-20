@@ -1,5 +1,6 @@
 import { AuroraBackground } from "@/components/ui/aurora-background"
 import { Button } from "@/components/ui/button"
+import { SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiPython } from "react-icons/si"
 
 export default function Page() {
   return (
