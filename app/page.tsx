@@ -1,8 +1,6 @@
 import { AuroraBackground } from "@/components/ui/aurora-background"
 import { Button } from "@/components/ui/button"
 
-        {/* Icons */}
-
 import {
   SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiTailwindcss,
   SiPython, SiDocker, SiGit, SiLinux, SiGithubactions,
@@ -29,8 +27,11 @@ const row2 = [
   { Icon: SiVite, label: "Vite", color: "text-purple-500" },
 ];
 
-const MarqueeContent = ({ items }: { items: typeof row1 }) => (
-  <div className="flex items-center gap-8 pr-8">
+// 1. Updated: We now apply the animation classes DIRECTLY to this wrapper
+const MarqueeContent = ({ items, reverse = false }: { items: typeof row1, reverse?: boolean }) => (
+  <div 
+    className={`flex shrink-0 items-center gap-8 pr-8 ${reverse ? 'animate-scroll-right' : 'animate-scroll-left'}`}
+  >
     {items.map((item, idx) => (
       <div key={idx} className="flex w-52 shrink-0 items-center gap-3 text-lg font-semibold tracking-wide text-slate-200">
         <item.Icon className={`text-3xl ${item.color}`} />
@@ -45,7 +46,6 @@ export default function Page() {
     <AuroraBackground>
       <div className="absolute inset-0 h-full w-full overflow-y-auto overflow-x-hidden">
         
-        {/* Hero Section */}
         <div className="flex w-full min-h-screen items-center justify-start p-6 md:pl-30">
           <div className="flex w-full max-w-5xl flex-col items-start justify-start gap-6 rounded-lg text-left">
             <h1 className="text-7xl font-bold text-indigo-200">Varga Zsombor</h1>
@@ -58,28 +58,25 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Marquee Section */}
         <section className="relative overflow-hidden border-t border-white/15 py-10 pb-20">
           <div className="mx-auto w-full max-w-6xl space-y-8 px-6">
             <p className="text-sm uppercase tracking-widest text-slate-300">
               Languages & tools
             </p>
 
+            {/* 2. Updated: Removed the extra `.marquee` wrapper. The children handle it now! */}
             {/* Row 1: Left Scrolling */}
-            <div className="flex h-14 items-center overflow-hidden rounded-lg text-slate-50 relative mask-image-gradient">
-              <div className="marquee">
-                <MarqueeContent items={row1} />
-                <MarqueeContent items={row1} />
-              </div>
+            <div className="flex h-14 w-full items-center overflow-hidden rounded-lg text-slate-50 relative mask-image-gradient">
+              <MarqueeContent items={row1} />
+              <MarqueeContent items={row1} />
             </div>
 
             {/* Row 2: Right Scrolling */}
-            <div className="flex h-14 items-center overflow-hidden rounded-lg text-slate-50 relative mask-image-gradient">
-              <div className="marquee marquee--reverse">
-                <MarqueeContent items={row2} />
-                <MarqueeContent items={row2} />
-              </div>
+            <div className="flex h-14 w-full items-center overflow-hidden rounded-lg text-slate-50 relative mask-image-gradient">
+              <MarqueeContent items={row2} reverse />
+              <MarqueeContent items={row2} reverse />
             </div>
+            
           </div>
         </section>
 
