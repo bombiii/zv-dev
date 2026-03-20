@@ -51,13 +51,14 @@ export default function Page() {
   return (
     <AuroraBackground>
       <ThemeToggle />
+      <title>Varga Zsombor | Szoftver  & Web Fejlesztő</title>
       <div className="absolute inset-0 h-full w-full overflow-y-auto overflow-x-hidden">
         
-        <div className="flex w-full min-h-screen items-center justify-start p-6 md:pl-30 animate-startup-hero">
+        <div className="flex w-full min-h-screen items-center justify-start p-6 md:pl-65 animate-startup-hero">
           <div className="flex w-full max-w-5xl flex-col items-start justify-start gap-6 rounded-lg text-left">
             <CanvasText
               text="Varga Zsombor"
-              className="text-2xl font-bold md:text-4xl lg:text-6xl"
+              className="text-2xl font-bold md:text-4xl lg:text-6xl hover:transform hover:scale-103 transition-transform duration-700"
               backgroundClassName="bg-blue-700 dark:bg-indigo-200"
               colors={[
                 "rgba(0, 153, 255, 1)",
@@ -74,10 +75,10 @@ export default function Page() {
               lineGap={4}
               animationDuration={20}
             />
-            <h2 className="-mt-5 text-4xl text-black/30 dark:text-indigo-200/20">Software Fejlesztő | Web Fejlesztő</h2>
+            <h2 className="-mt-5 text-4xl text-black/30 dark:text-indigo-200/20">Szoftver Fejlesztő | Web Fejlesztő</h2>
             <div className="flex w-3xl border border-slate-400 dark:border-slate-400"></div>
-            <p className="text-slate-600 dark:text-slate-200">
-              Fedezd fel a projektjeimet, ahol a kreativitás és a technológia találkozik.
+            <p className="text-slate-600 dark:text-slate-200 w-auto max-w-2xl text-lg">
+              Egy tanuló szoftver és web fejlesztő vagyok, aki szenvedélyesen szereti a technológiát és a kreatív problémamegoldást.
             </p>
             <Button variant="default">Projektek megtekintése</Button>
           </div>
