@@ -74,7 +74,7 @@ export default function Page() {
               lineGap={4}
               animationDuration={20}
             />
-            <h2 className="-mt-5 text-4xl text-black/30 dark:text-indigo-200/20">Software Developer | Web Developer</h2>
+            <h2 className="-mt-5 text-4xl text-black/30 dark:text-indigo-200/20">Software Fejlesztő | Web Fejlesztő</h2>
             <div className="flex w-3xl border border-slate-400 dark:border-slate-400"></div>
             <p className="text-slate-600 dark:text-slate-200">
               Fedezd fel a projektjeimet, ahol a kreativitás és a technológia találkozik.
