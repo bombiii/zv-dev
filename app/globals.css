@@ -48,6 +48,7 @@
     --animate-aurora: aurora 60s linear infinite;
     --animate-scroll-left: marquee-left 30s linear infinite;
     --animate-scroll-right: marquee-right 30s linear infinite;
+    --animate-startup-hero: startUp-Hero 1s ease-in-out forwards;
 
   @keyframes aurora {
     from {
@@ -71,6 +72,17 @@
 @keyframes marquee-right {
   0%   { transform: translateX(-50%); }
   100% { transform: translateX(0%); }
+}
+
+@keyframes startUp-Hero {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .marquee::after {

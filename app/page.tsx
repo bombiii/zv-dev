@@ -27,7 +27,6 @@ const row2 = [
   { Icon: SiVite, label: "Vite", color: "text-purple-500" },
 ];
 
-// 1. Updated: We now apply the animation classes DIRECTLY to this wrapper
 const MarqueeContent = ({ items }: { items: typeof row1 }) => (
   <div className="flex shrink-0 items-center gap-8 pr-8">
     {items.map((item, idx) => (
@@ -51,7 +50,7 @@ export default function Page() {
     <AuroraBackground>
       <div className="absolute inset-0 h-full w-full overflow-y-auto overflow-x-hidden">
         
-        <div className="flex w-full min-h-screen items-center justify-start p-6 md:pl-30">
+        <div className="flex w-full min-h-screen items-center justify-start p-6 md:pl-30 animate-startup-hero">
           <div className="flex w-full max-w-5xl flex-col items-start justify-start gap-6 rounded-lg text-left">
             <h1 className="text-7xl font-bold text-indigo-200">Varga Zsombor</h1>
             <h2 className="-mt-5 text-4xl text-indigo-200/20">Software Developer | Web Developer</h2>
