@@ -8,15 +8,15 @@
 - Szeretek tiszta, jól tesztelt kódot írni és felhasználói élményt javítani
 
 ## 🛠️ Tech stack
-- **Frontend:** HTML, CSS, JavaScript, TypeScript, React, Vue
-- **Backend:** Node.js, Express, NestJS, Python, Flask
+- **Frontend:** HTML, CSS, JavaScript, TypeScript, React, Vue, 
+- **Backend:** Node.js, Python
 - **Adatbázis:** PostgreSQL, MongoDB, SQLite
-- **DevOps / Eszközök:** Git, GitHub, Docker, CI/CD, Figma
+- **DevOps / Eszközök:** Git, GitHub, Docker, Figma
 
 ## 🚀 Fő projektek
 
-### 1) [projekt-neve](link)
-- Leírás:
+### 1) [vzs](https://github.com/bombiii/portfolio)
+- Leírás: Egy saját portfólió 
 - Fő technológiák:
 - Eredmény:
 
