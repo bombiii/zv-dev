@@ -15,7 +15,7 @@
 
 ## 🚀 Fő projektek
 
-### 1) zv – Portfolio
+### 1) [zv-dev – Portfolio](https://github.com/bombiii/zv-dev)
 
 - **Leírás:** Saját fejlesztésű, modern webes portfólió, amely bemutatja a projektjeimet, készségeimet és tapasztalataimat.
 - **Fő technológiák:** TypeScript, React (Next.js), Tailwind CSS
@@ -28,6 +28,9 @@
   - Saját online jelenlét kialakítása
   - Frontend fejlesztési készségek demonstrálása
   - Valós projektek bemutatása egy letisztult felületen
+- **Dokumentáció**
+  - [Fejlesztői (Angol)](docs/English/Developer%20Documentation%20(ENG).md)
+  - [Fejlesztői (Magyar)](/docs/Magyar/Developer%20Documentation%20(HUN).md) 
 
 ## 🎯 Cél
 - Keresek junior/mid szintű frontend/backend pozíciót
