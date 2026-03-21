@@ -29,6 +29,7 @@
   - Frontend fejlesztési készségek demonstrálása
   - Valós projektek bemutatása egy letisztult felületen
 - **Dokumentáció**
+  - [Notion](https://www.notion.so/3299941016c2804f8127ce7291e64c43?v=3299941016c2805480a1000cf8f21ed1&source=copy_link)
   - [Fejlesztői (Angol)](docs/English/Developer%20Documentation%20(ENG).md)
   - [Fejlesztői (Magyar)](/docs/Magyar/Developer%20Documentation%20(HUN).md) 
 
