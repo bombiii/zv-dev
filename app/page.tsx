@@ -103,29 +103,30 @@ export default function Page() {
       ? "opacity-100 translate-y-0"
       : "opacity-0 translate-y-10"
     }`}>
-          <div className="max-w-5xl">
+          <div className="mx-auto w-full max-w-6xl flex flex-col items-start gap-8">
             
-            <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">About me</p>
+            <p className="text-sm uppercase tracking-widest text-indigo-800 dark:text-indigo-200 mb-4">About me</p>
             
             <div className="flex flex-col md:flex-row gap-12 items-center">
               
-              <div className="shrink-0 w-100 h-100 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 overflow-hidden">
+              <div className="shrink-0 w-100 h-100 rounded-2xl bg-white/10 backdrop-blur-md border border-white/5 overflow-hidden
+              hover:scale-105 transition-transform duration-300">
                 <img src="avatar.jpg" alt="Varga Zsombor" className="w-full h-full object-cover" />
               </div>
 
-              <div className="flex flex-col gap-4">
-                <h2 className="text-3xl font-bold text-indigo-700 dark:text-indigo-200">
-                  Szia, Zsombor vagyok. 👋
-                </h2>
-                <p className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-                  Egy szoftverfejlesztő vagyok, aki szenvedélyesen szereti a technológiát és a kreatív problémamegoldást. 
-                  Szeretek dolgozni a React, Next.js és TypeScript modern technológiákkal, hogy ötleteket életbe léptessek.
-                </p>
-                <p className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-                  Amikor nem kódolok, akkor új eszközöket keresek, hozzájárulok projektekhez, 
-                  vagy csak egy jó játékkal játszom.
-                </p>
-              </div>
+                <div className="flex flex-col gap-4 p-6">
+                  <h2 className="text-3xl font-bold text-indigo-700 dark:text-indigo-200">
+                    Szia, Zsombor vagyok. 👋
+                  </h2>
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+                    Egy szoftverfejlesztő vagyok, aki szenvedélyesen szereti a technológiát és a kreatív problémamegoldást.
+                    Szeretek dolgozni a React, Next.js és TypeScript modern technológiákkal, hogy ötleteket életbe léptessek.
+                  </p>
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+                    Amikor nem kódolok, akkor új eszközöket keresek, hozzájárulok projektekhez,
+                    vagy csak egy jó játékkal játszom.
+                  </p>
+                </div>
 
             </div>
           </div>
