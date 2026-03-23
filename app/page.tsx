@@ -107,9 +107,9 @@ export default function Page() {
             
             <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">About me</p>
             
-            <div className="flex flex-col md:flex-row gap-12 items-start">
+            <div className="flex flex-col md:flex-row gap-12 items-center">
               
-              <div className="shrink-0 w-36 h-36 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 overflow-hidden">
+              <div className="shrink-0 w-100 h-100 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 overflow-hidden">
                 <img src="avatar.jpg" alt="Varga Zsombor" className="w-full h-full object-cover" />
               </div>
 
