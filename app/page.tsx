@@ -65,10 +65,10 @@ export default function Page() {
       <div className="absolute inset-0 h-full w-full overflow-y-auto overflow-x-hidden">
         
         <div className="flex w-full min-h-screen items-center justify-start p-6 md:pl-65">
-          <div className="flex w-full max-w-5xl flex-col items-start justify-start gap-6 rounded-lg text-left">
+          <div className="flex w-full max-w-5xl flex-col items-start justify-start gap-6 rounded-lg text-left animate-startup-hero delay-100 opacity-0 ">
             <CanvasText
               text="Varga Zsombor"
-              className="text-2xl font-bold md:text-4xl lg:text-6xl hover:transform hover:scale-103 transition-transform duration-700 animate-startup-hero"
+              className="text-2xl font-bold md:text-4xl lg:text-6xl hover:transform hover:scale-103 transition-transform duration-700"
               backgroundClassName="bg-blue-700 dark:bg-indigo-200"
               colors={[
                 "rgba(0, 153, 255, 1)",
@@ -88,7 +88,7 @@ export default function Page() {
             <h2 className="-mt-5 text-4xl text-black/30 dark:text-indigo-200/20 animate-startup-hero delay-500 opacity-0">Szoftver Fejlesztő | Web Fejlesztő</h2>
             <div className="flex w-3xl border border-slate-400 dark:border-slate-400 animate-startup-hero delay-800 opacity-0"></div>
             <p className="text-slate-600 dark:text-slate-200 w-auto max-w-2xl text-lg animate-startup-hero delay-1000 opacity-0">
-              Egy tanuló szoftver és web fejlesztő vagyok, aki szenvedélyesen szereti a technológiát és a kreatív problémamegoldást.
+              Egy tanuló szoftver és web fejlesztő vagyok, aki szereti a technológiát és a kreatív problémamegoldást.
             </p>
             <Button variant="default" className="animate-startup-hero delay-1500 opacity-0">
               Projektek megtekintése
@@ -119,12 +119,10 @@ export default function Page() {
                     Szia, Zsombor vagyok. 👋
                   </h2>
                   <p className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-                    Egy szoftverfejlesztő vagyok, aki szenvedélyesen szereti a technológiát és a kreatív problémamegoldást.
-                    Szeretek dolgozni a React, Next.js és TypeScript modern technológiákkal, hogy ötleteket életbe léptessek.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In sed dolorum numquam consequatur asperiores sint! Soluta illum repellendus voluptate asperiores eligendi. Magnam omnis ad ipsam eveniet qui nemo asperiores tenetur.
                   </p>
                   <p className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-                    Amikor nem kódolok, akkor új eszközöket keresek, hozzájárulok projektekhez,
-                    vagy csak egy jó játékkal játszom.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum exercitationem optio ducimus facilis illum, reprehenderit placeat voluptates sint beatae ullam doloremque facere officia doloribus mollitia asperiores vitae molestias illo possimus?
                   </p>
                 </div>
 
