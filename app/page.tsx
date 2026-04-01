@@ -138,12 +138,10 @@ export default function Page() {
               Nyelvek és eszközök
             </p>
 
-            {/* Row 1: Left Scrolling */}
             <div className="flex h-14 w-full items-center overflow-hidden rounded-lg text-slate-50 relative mask-image-gradient">
               <MarqueeRow items={row1} />
             </div>
 
-            {/* Row 2: Right Scrolling */}
             <div className="flex h-14 w-full items-center overflow-hidden rounded-lg text-slate-50 relative mask-image-gradient">
               <MarqueeRow items={row2} reverse />
             </div>
