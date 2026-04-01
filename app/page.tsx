@@ -65,7 +65,7 @@ export default function Page() {
       <div className="absolute inset-0 h-full w-full overflow-y-auto overflow-x-hidden">
         
         <div className="flex w-full min-h-screen items-center justify-start p-6 md:pl-65">
-          <div className="flex w-full max-w-5xl flex-col items-start justify-start gap-6 rounded-lg text-left animate-startup-hero delay-100 opacity-0 ">
+          <div className="flex w-full max-w-5xl flex-col items-start justify-start gap-6 rounded-lg text-left animate-startup-hero delay-1000 opacity-0 ">
             <CanvasText
               text="Varga Zsombor"
               className="text-2xl font-bold md:text-4xl lg:text-6xl hover:transform hover:scale-103 transition-transform duration-700"
