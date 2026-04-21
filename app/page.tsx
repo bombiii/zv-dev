@@ -12,6 +12,9 @@ import {
   SiHtml5, SiCss, SiSass, SiChakraui, SiStorybook, SiJest, SiTestinglibrary, SiVite,
   SiMysql
 } from "react-icons/si";
+import Image from "next/image"
+import { projects } from "@/data/projects"
+import { ProjectCard } from "@/components/ui/project-card"
 
 const row1 = [
   { Icon: SiJavascript, label: "JavaScript", color: "text-yellow-400" },
@@ -65,7 +68,7 @@ export default function Page() {
       <div className="absolute inset-0 h-full w-full overflow-y-auto overflow-x-hidden">
         
         <div className="flex w-full min-h-screen items-center justify-start p-6 md:pl-65">
-          <div className="flex w-full max-w-5xl flex-col items-start justify-start gap-6 rounded-lg text-left animate-startup-hero delay-1000 opacity-0 ">
+          <div className="flex w-full max-w-5xl flex-col items-start justify-start gap-6 rounded-lg text-left animate-startup-hero [animation-delay:1000ms] opacity-0 ">
             <CanvasText
               text="Varga Zsombor"
               className="text-2xl font-bold md:text-4xl lg:text-6xl hover:transform hover:scale-103 transition-transform duration-700"
@@ -85,12 +88,16 @@ export default function Page() {
               lineGap={4}
               animationDuration={20}
             />
-            <h2 className="-mt-5 text-4xl text-black/30 dark:text-indigo-200/20 animate-startup-hero delay-500 opacity-0">Szoftver Fejlesztő | Web Fejlesztő</h2>
-            <div className="flex w-3xl border border-slate-400 dark:border-slate-400 animate-startup-hero delay-800 opacity-0"></div>
-            <p className="text-slate-600 dark:text-slate-200 w-auto max-w-2xl text-lg animate-startup-hero delay-1000 opacity-0">
+            <h2 className="-mt-5 text-4xl text-black/30 dark:text-indigo-200/20 animate-startup-hero [animation-delay:500ms] opacity-0">Szoftver Fejlesztő | Web Fejlesztő</h2>
+            <div className="flex w-3xl border border-slate-400 dark:border-slate-400 animate-startup-hero [animation-delay:800ms] opacity-0"></div>
+            <p className="text-slate-600 dark:text-slate-200 w-auto max-w-2xl text-lg animate-startup-hero [animation-delay:1000ms] opacity-0">
               Egy tanuló szoftver és web fejlesztő vagyok, aki szereti a technológiát és a kreatív problémamegoldást.
             </p>
-            <Button variant="default" className="animate-startup-hero delay-1500 opacity-0">
+            <Button
+              variant="default"
+              className="animate-startup-hero [animation-delay:1500ms] opacity-0"
+              onClick={() => document.getElementById("projektek")?.scrollIntoView({ behavior: "smooth" })}
+            >
               Projektek megtekintése
             </Button>
           </div>
@@ -109,22 +116,26 @@ export default function Page() {
             
             <div className="flex flex-col md:flex-row gap-12 items-center">
               
-              <div className="shrink-0 w-100 h-100 rounded-2xl bg-white/10 backdrop-blur-md border border-white/5 overflow-hidden
+              <div className="shrink-0 w-100 h-100 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-xl/30 overflow-hidden
               hover:scale-105 transition-transform duration-300">
-                <img src="avatar.jpg" alt="Varga Zsombor" className="w-full h-full object-cover" />
+                <Image
+                  src="/avatar.jpg"
+                  width={500}
+                  height={500}
+                  alt="Varga Zsombor"/>
               </div>
 
-                <div className="flex flex-col gap-4 p-6">
-                  <h2 className="text-3xl font-bold text-indigo-700 dark:text-indigo-200">
-                    Szia, Zsombor vagyok. 👋
-                  </h2>
-                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In sed dolorum numquam consequatur asperiores sint! Soluta illum repellendus voluptate asperiores eligendi. Magnam omnis ad ipsam eveniet qui nemo asperiores tenetur.
-                  </p>
-                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum exercitationem optio ducimus facilis illum, reprehenderit placeat voluptates sint beatae ullam doloremque facere officia doloribus mollitia asperiores vitae molestias illo possimus?
-                  </p>
-                </div>
+              <div className="flex flex-col gap-4 p-6 backdrop-blur-3xl rounded-2xl border border-white/25 shadow-xl/30">
+                <h2 className="text-3xl font-bold text-indigo-700 dark:text-indigo-200">
+                  Szia, Zsombor vagyok. 👋
+                </h2>
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In sed dolorum numquam consequatur asperiores sint! Soluta illum repellendus voluptate asperiores eligendi. Magnam omnis ad ipsam eveniet qui nemo asperiores tenetur.
+                </p>
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum exercitationem optio ducimus facilis illum, reprehenderit placeat voluptates sint beatae ullam doloremque facere officia doloribus mollitia asperiores vitae molestias illo possimus?
+                </p>
+              </div>
 
             </div>
           </div>
@@ -148,11 +159,16 @@ export default function Page() {
           </div>
         </section>
         
-        <section className="relative overflow-hidden border-t border-white/15 py-10 pb-20">
+        <section id="projektek" className="overflow-hidden border-t border-white/15 py-10 pb-20">
           <div className="mx-auto w-full max-w-6xl space-y-8 px-6">
             <p className="text-sm uppercase tracking-widest text-indigo-800 dark:text-indigo-200 mb-4">
               Projektek
             </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.map((project) => (
+                <ProjectCard key={project.title} project={project} />
+              ))}
+            </div>
           </div>
         </section>
       </div>
