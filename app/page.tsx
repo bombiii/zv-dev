@@ -134,7 +134,7 @@ export default function Page() {
 
         <section className="relative overflow-hidden border-t border-white/15 py-10 pb-20">
           <div className="mx-auto w-full max-w-6xl space-y-8 px-6">
-            <p className="text-sm uppercase tracking-widest text-slate-300">
+            <p className="text-sm uppercase tracking-widest text-indigo-800 dark:text-indigo-200 mb-4">
               Nyelvek és eszközök
             </p>
 
@@ -145,6 +145,14 @@ export default function Page() {
             <div className="flex h-14 w-full items-center overflow-hidden rounded-lg text-slate-50 relative mask-image-gradient">
               <MarqueeRow items={row2} reverse />
             </div>
+          </div>
+        </section>
+        
+        <section className="relative overflow-hidden border-t border-white/15 py-10 pb-20">
+          <div className="mx-auto w-full max-w-6xl space-y-8 px-6">
+            <p className="text-sm uppercase tracking-widest text-indigo-800 dark:text-indigo-200 mb-4">
+              Projektek
+            </p>
           </div>
         </section>
       </div>
