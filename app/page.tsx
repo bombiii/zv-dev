@@ -9,7 +9,7 @@ import { useInView } from "@/hooks/useInView"
 import {
   SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiTailwindcss,
   SiPython, SiDocker, SiGit, SiLinux, SiGithubactions,
-  SiHtml5, SiCss, SiSass, SiChakraui, SiStorybook, SiJest, SiTestinglibrary, SiVite,
+  SiHtml5, SiCss, SiTestinglibrary, SiVite,
   SiMysql
 } from "react-icons/si";
 import Image from "next/image"
@@ -41,7 +41,7 @@ const row2 = [
 const MarqueeContent = ({ items }: { items: typeof row1 }) => (
   <div className="flex shrink-0 items-center gap-8 pr-8">
     {items.map((item, idx) => (
-      <div key={idx} className="flex w-52 shrink-0 items-center gap-3 text-lg font-semibold tracking-wide text-slate-200">
+      <div key={idx} className="flex w-52 shrink-0 items-center gap-3 text-lg font-semibold tracking-wide text-slate-900 dark:text-slate-200">
         <item.Icon className={`text-3xl ${item.color}`} />
         <span className="truncate">{item.label}</span>
       </div>
@@ -149,15 +149,17 @@ export default function Page() {
               Nyelvek és eszközök
             </p>
 
-            <div className="flex h-14 w-full items-center overflow-hidden rounded-lg text-slate-50 relative mask-image-gradient">
+            <div className="flex h-14 w-full items-center overflow-hidden rounded-lg relative mask-image-gradient">
               <MarqueeRow items={row1} />
             </div>
 
-            <div className="flex h-14 w-full items-center overflow-hidden rounded-lg text-slate-50 relative mask-image-gradient">
+            <div className="flex h-14 w-full items-center overflow-hidden rounded-lg relative mask-image-gradient">
               <MarqueeRow items={row2} reverse />
             </div>
           </div>
         </section>
+        
+        {/* PROJECTS */}
         
         <section id="projektek" className="overflow-hidden border-t border-white/15 py-10 pb-20">
           <div className="mx-auto w-full max-w-6xl space-y-8 px-6">
