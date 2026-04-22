@@ -23,6 +23,7 @@ import {
   SiTestinglibrary,
   SiVite,
   SiMysql,
+  SiGithub,
 } from "react-icons/si"
 import Image from "next/image"
 import { projects } from "@/data/projects"
@@ -32,7 +33,11 @@ const row1 = [
   { Icon: SiJavascript, label: "JavaScript", color: "text-yellow-400" },
   { Icon: SiTypescript, label: "TypeScript", color: "text-blue-500" },
   { Icon: SiReact, label: "React", color: "text-cyan-400" },
-  { Icon: SiNextdotjs, label: "Next.js", color: "text-slate-900 dark:text-slate-100" },
+  {
+    Icon: SiNextdotjs,
+    label: "Next.js",
+    color: "text-slate-900 dark:text-slate-100",
+  },
   { Icon: SiNodedotjs, label: "Node.js", color: "text-green-500" },
   { Icon: SiTailwindcss, label: "Tailwind CSS", color: "text-cyan-400" },
   { Icon: SiCss, label: "CSS", color: "text-blue-500" },
@@ -43,7 +48,11 @@ const row2 = [
   { Icon: SiPython, label: "Python", color: "text-blue-400" },
   { Icon: SiDocker, label: "Docker", color: "text-blue-500" },
   { Icon: SiGit, label: "Git", color: "text-orange-500" },
-  { Icon: SiLinux, label: "Linux", color: "text-orange-500 dark:text-yellow-200" },
+  {
+    Icon: SiLinux,
+    label: "Linux",
+    color: "text-orange-500 dark:text-yellow-200",
+  },
   { Icon: SiGithubactions, label: "CI/CD", color: "text-blue-400" },
   { Icon: SiHtml5, label: "HTML5", color: "text-orange-500" },
   { Icon: SiVite, label: "Vite", color: "text-purple-500" },
@@ -218,12 +227,33 @@ export default function Page() {
         {/* CONTACT */}
 
         <section className="border-t border-white/15 py-10 pb-20">
-          <div className="mx-auto w-full max-w-6xl px-6">
-            <p className="mb-4 text-sm tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
-              Kapcsolat
-            </p>
-            <p className="mb-4 text-sm text-indigo-800 dark:text-indigo-200"></p>
-            <p className="mb-4 text-sm text-indigo-800 dark:text-indigo-200"></p>
+          <div className="mx-auto w-full max-w-6xl px-6 flex flex-col items-center gap-10">
+            <div className="flex flex-col items-center gap-2">
+              <h2 className="text-3xl font-bold text-slate-700 dark:text-slate-100">Lépj kapcsolatba velem</h2>
+              <p className="text-slate-500 dark:text-slate-400 text-sm">Nyitott vagyok együttműködésre és lehetőségekre.</p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://github.com/bombiii"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-xl border border-white/25 bg-white/10 px-6 py-4 shadow-xl/30 backdrop-blur-md transition-all duration-200 hover:scale-105 hover:border-white/40 hover:bg-white/20"
+              >
+                <SiGithub className="text-2xl text-slate-700 dark:text-slate-100" />
+                <span className="font-medium text-slate-700 dark:text-slate-100">GitHub</span>
+              </a>
+
+              <a
+                href="mailto:zsomborvarga077@gmail.com"
+                className="flex items-center gap-3 rounded-xl border border-white/25 bg-white/10 px-6 py-4 shadow-xl/30 backdrop-blur-md transition-all duration-200 hover:scale-105 hover:border-white/40 hover:bg-white/20"
+              >
+                <svg className="h-6 w-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span className="font-medium text-slate-700 dark:text-slate-100">Email</span>
+              </a>
+            </div>
           </div>
         </section>
       </div>
