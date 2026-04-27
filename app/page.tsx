@@ -100,7 +100,7 @@ export default function Page() {
       <title>Varga Zsombor | Szoftver & Web Fejlesztő</title>
       <div className="absolute inset-0 h-full w-full overflow-x-hidden overflow-y-auto">
         <div className="flex min-h-screen w-full items-center justify-start p-6 md:pl-65">
-          <div className="flex w-full max-w-5xl animate-startup-hero flex-col items-start justify-start gap-6 rounded-lg text-left opacity-0 [animation-delay:1000ms]">
+          <div className="flex w-full max-w-5xl animate-startup-hero flex-col items-start justify-start gap-6 rounded-lg text-left opacity-0 [animation-delay:300ms]">
             <CanvasText
               text="Varga Zsombor"
               className="text-2xl font-bold transition-transform duration-700 hover:scale-103 hover:transform md:text-4xl lg:text-6xl"
@@ -123,15 +123,15 @@ export default function Page() {
             <h2 className="-mt-5 animate-startup-hero text-4xl text-black/30 opacity-0 [animation-delay:500ms] dark:text-indigo-200/20">
               Szoftver Fejlesztő | Web Fejlesztő
             </h2>
-            <div className="flex w-3xl animate-startup-hero border border-slate-400 opacity-0 [animation-delay:800ms] dark:border-slate-400"></div>
-            <p className="w-auto max-w-2xl animate-startup-hero text-lg text-slate-600 opacity-0 [animation-delay:1000ms] dark:text-slate-200">
+            <div className="flex w-3xl animate-startup-hero border border-slate-400 opacity-0 [animation-delay:600ms] dark:border-slate-400"></div>
+            <p className="w-auto max-w-2xl animate-startup-hero text-lg text-slate-600 opacity-0 [animation-delay:800ms] dark:text-slate-200">
               Egy tanuló szoftver és web fejlesztő vagyok, aki szereti a
               technológiát és a kreatív problémamegoldást.
             </p>
             <div>
               <Button
                 variant="default"
-                className="animate-startup-hero opacity-0 [animation-delay:1500ms] mr-3"
+                className="animate-startup-hero opacity-0 [animation-delay:1000ms] mr-3"
                 onClick={() =>
                   document
                     .getElementById("projektek")
@@ -239,7 +239,7 @@ export default function Page() {
 
         <section className="border-t border-white/15 py-10 pb-20">
           <div className="mx-auto w-full max-w-6xl px-6 flex flex-col items-center gap-10">
-            <div className="flex flex-col items-center gap-2">2
+            <div className="flex flex-col items-center gap-2">
               <h2 className="text-3xl font-bold text-slate-700 dark:text-slate-100">Lépj kapcsolatba velem</h2>
               <p className="text-slate-500 dark:text-slate-400 text-sm">Nyitott vagyok együttműködésre és lehetőségekre.</p>
             </div>
