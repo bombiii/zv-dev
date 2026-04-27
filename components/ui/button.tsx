@@ -17,6 +17,7 @@ const buttonStyles: Record<NonNullable<ButtonProps["variant"]>, string> = {
     "shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_4px_16px_rgba(0,0,0,0.1)]",
     "dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_4px_16px_rgba(0,0,0,0.3)]",
     "hover:bg-white/20 dark:hover:bg-white/10",
+    "hover:scale-103",
     "hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.6),0_4px_24px_rgba(0,0,0,0.15)]",
     "transition-all duration-200",
   ].join(" "),
