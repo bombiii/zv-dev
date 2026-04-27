@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { CanvasText } from "@/components/ui/canvas-text"
 import { useInView } from "@/hooks/useInView"
+import Link from "next/link"
 
 import {
   SiJavascript,
@@ -127,17 +128,27 @@ export default function Page() {
               Egy tanuló szoftver és web fejlesztő vagyok, aki szereti a
               technológiát és a kreatív problémamegoldást.
             </p>
-            <Button
-              variant="default"
-              className="animate-startup-hero opacity-0 [animation-delay:1500ms]"
-              onClick={() =>
-                document
-                  .getElementById("projektek")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Projektek megtekintése
-            </Button>
+            <div>
+              <Button
+                variant="default"
+                className="animate-startup-hero opacity-0 [animation-delay:1500ms] mr-3"
+                onClick={() =>
+                  document
+                    .getElementById("projektek")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                Projektek megtekintése
+              </Button>
+              
+              <Link href="/cv">
+                <Button
+                  variant="default"
+                  className="animate-startup-hero opacity-0 [animation-delay:1500ms]">
+                  CV megtekintése
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -228,7 +239,7 @@ export default function Page() {
 
         <section className="border-t border-white/15 py-10 pb-20">
           <div className="mx-auto w-full max-w-6xl px-6 flex flex-col items-center gap-10">
-            <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center gap-2">2
               <h2 className="text-3xl font-bold text-slate-700 dark:text-slate-100">Lépj kapcsolatba velem</h2>
               <p className="text-slate-500 dark:text-slate-400 text-sm">Nyitott vagyok együttműködésre és lehetőségekre.</p>
             </div>
