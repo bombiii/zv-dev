@@ -98,7 +98,7 @@ export default function Page() {
       {/* HERO */}
 
       <title>Varga Zsombor | Szoftver & Web Fejlesztő</title>
-      <div className="absolute inset-0 h-full w-full overflow-x-hidden overflow-y-auto">
+      <div className="absolute inset-0 h-full w-full overflow-x-hidden overflow-y-auto" id="scroll-container">
         <div className="flex min-h-screen w-full items-center justify-start p-6 md:pl-65">
           <div className="flex w-full max-w-5xl animate-startup-hero flex-col items-start justify-start gap-6 rounded-lg text-left opacity-0 [animation-delay:300ms]">
             <CanvasText
@@ -128,7 +128,7 @@ export default function Page() {
               Egy tanuló szoftver és web fejlesztő vagyok, aki szereti a
               technológiát és a kreatív problémamegoldást.
             </p>
-            <div>
+            <div id="hero-buttons" className="flex gap-3">
               <Button
                 variant="default"
                 className="animate-startup-hero opacity-0 [animation-delay:1000ms] mr-3"
