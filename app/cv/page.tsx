@@ -7,6 +7,8 @@ import { cv } from "@/data/cv"
 import { SiGithub } from "react-icons/si"
 
 export default function CV() {
+  const downloadCV = () => {}
+
   return (
     <AuroraBackground>
       <title>CV | Varga Zsombor</title>
@@ -17,7 +19,7 @@ export default function CV() {
         <div className="flex min-h-screen w-full justify-center px-4 py-24 pb-16">
           <div className="flex w-full max-w-3xl flex-col gap-4">
             {/* HEADER */}
-            <div className="rounded-2xl border border-white/25 bg-white/10 p-8 shadow-xl/30 backdrop-blur-3xl">
+            <div className="rounded-2xl border border-white/25 p-8 shadow-xl/30 backdrop-blur-3xl">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                   <h1 className="text-4xl font-bold text-slate-800 dark:text-slate-100">
@@ -28,8 +30,8 @@ export default function CV() {
                   </p>
                 </div>
                 <button
-                  onClick={() => window.print()}
-                  className="shrink-0 rounded-xl border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-sm font-medium text-indigo-700 transition-all duration-200 hover:bg-indigo-500/20 dark:text-indigo-300 print:hidden"
+                  onClick={() => downloadCV()}
+                  className="shrink-0 rounded-xl border border-white/30 bg-white/10 px-4 py-2 text-sm font-medium text-indigo-700 transition-all duration-200 hover:bg-indigo-500/20 dark:border-white/10 dark:text-indigo-200 print:hidden"
                 >
                   Letöltés / Nyomtatás
                 </button>
@@ -68,7 +70,7 @@ export default function CV() {
             </div>
 
             {/* SKILLS */}
-            <div className="rounded-2xl border border-white/25 bg-white/10 p-6 shadow-xl/30 backdrop-blur-3xl">
+            <div className="rounded-2xl border border-white/25 p-6 shadow-xl/30 backdrop-blur-3xl">
               <p className="mb-4 text-xs tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
                 Készségek
               </p>
@@ -97,7 +99,7 @@ export default function CV() {
             </div>
 
             {/* EDUCATION */}
-            <div className="rounded-2xl border border-white/25 bg-white/10 p-6 shadow-xl/30 backdrop-blur-3xl">
+            <div className="rounded-2xl border border-white/25 p-6 shadow-xl/30 backdrop-blur-3xl">
               <p className="mb-4 text-xs tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
                 Tanulmányok
               </p>
@@ -131,7 +133,7 @@ export default function CV() {
             </div>
 
             {/* EXPERIENCE */}
-            <div className="rounded-2xl border border-white/25 bg-white/10 p-6 shadow-xl/30 backdrop-blur-3xl">
+            <div className="rounded-2xl border border-white/25 p-6 shadow-xl/30 backdrop-blur-3xl">
               <p className="mb-4 text-xs tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
                 Tapasztalat
               </p>
@@ -175,7 +177,7 @@ export default function CV() {
             </div>
 
             {/* LANGUAGES */}
-            <div className="rounded-2xl border border-white/25 bg-white/10 p-6 shadow-xl/30 backdrop-blur-3xl">
+            <div className="rounded-2xl border border-white/25 p-6 shadow-xl/30 backdrop-blur-3xl">
               <p className="mb-4 text-xs tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
                 Nyelvek
               </p>
