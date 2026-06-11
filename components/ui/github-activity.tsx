@@ -27,7 +27,7 @@ export default function GitHubActivity() {
   }, []);
 
   return (
-    <div className="flex w-full flex-col gap-4 rounded-2xl border border-white/25 bg-white/10 p-6 shadow-xl/30 backdrop-blur-3xl transition-transform duration-300 hover:scale-[1.02]">
+    <div className="flex w-full flex-col gap-4 rounded-2xl border border-white/25 p-6 shadow-xl/30 backdrop-blur-3xl transition-transform duration-300 hover:scale-[1.02]">
       <div className="flex items-center gap-3 mb-2">
         <SiGithub className="text-2xl text-indigo-700 dark:text-indigo-200" />
         <h3 className="text-2xl font-bold text-indigo-700 dark:text-indigo-200">Élő GitHub Aktivitás</h3>
