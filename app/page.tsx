@@ -29,6 +29,7 @@ import {
 import Image from "next/image"
 import { projects } from "@/data/projects"
 import { ProjectCard } from "@/components/ui/project-card"
+import Terminal from "@/components/terminal"
 
 const row1 = [
   { Icon: SiJavascript, label: "JavaScript", color: "text-yellow-400" },
@@ -199,8 +200,16 @@ export default function Page() {
           </div>
         </section>
 
-        {/* MARQUEE */}
+        {/* TERMINAL SECTION (ÚJ) */}
+        
+        <section className="w-full px-6 py-10 md:pl-30">
+          <div className="mx-auto w-full max-w-6xl space-y-8 flex flex-col items-center">
+            <Terminal />
+          </div>
+        </section>
 
+        {/* MARQUEE */}
+        
         <section className="relative overflow-hidden border-t border-white/15 py-10 pb-20">
           <div className="mx-auto w-full max-w-6xl space-y-8 px-6">
             <h2 className="mb-4 text-sm tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
