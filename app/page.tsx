@@ -163,9 +163,9 @@ export default function Page() {
           }`}
         >
           <div className="mx-auto flex w-full max-w-6xl flex-col items-start gap-8">
-            <p className="mb-4 text-sm tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
+            <h2 className="mb-4 text-sm tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
               Rólam
-            </p>
+            </h2>
 
             <div className="flex flex-col items-center gap-12 md:flex-row">
               <div className="h-100 w-100 shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-white/10 shadow-xl/30 backdrop-blur-md transition-transform duration-300 hover:scale-105">
@@ -178,9 +178,9 @@ export default function Page() {
               </div>
 
               <div className="flex flex-col gap-4 rounded-2xl border border-white/25 p-6 shadow-xl/30 backdrop-blur-3xl">
-                <h2 className="text-3xl font-bold text-indigo-700 dark:text-indigo-200">
+                <h3 className="text-3xl font-bold text-indigo-700 dark:text-indigo-200">
                   Szia, Zsombor vagyok. 👋
-                </h2>
+                </h3>
                 <p className="max-w-2xl leading-relaxed text-slate-600 dark:text-slate-300">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. In
                   sed dolorum numquam consequatur asperiores sint! Soluta illum
@@ -203,9 +203,9 @@ export default function Page() {
 
         <section className="relative overflow-hidden border-t border-white/15 py-10 pb-20">
           <div className="mx-auto w-full max-w-6xl space-y-8 px-6">
-            <p className="mb-4 text-sm tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
+            <h2 className="mb-4 text-sm tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
               Nyelvek és eszközök
-            </p>
+            </h2>
 
             <div className="mask-image-gradient relative flex h-14 w-full items-center overflow-hidden rounded-lg">
               <MarqueeRow items={row1} />
@@ -224,9 +224,9 @@ export default function Page() {
           className="overflow-hidden border-t border-white/15 py-10 pb-20"
         >
           <div className="mx-auto w-full max-w-6xl space-y-8 px-6">
-            <p className="mb-4 text-sm tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
+            <h2 className="mb-4 text-sm tracking-widest text-indigo-800 uppercase dark:text-indigo-200">
               Projektek
-            </p>
+            </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {projects.map((project) => (
                 <ProjectCard key={project.title} project={project} />
