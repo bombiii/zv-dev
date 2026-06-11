@@ -83,4 +83,45 @@ export default function Terminal() {
       setInput("");
     }
   };
+
+  return (
+    <div 
+      ref={containerRef}
+      className="w-full max-w-3xl rounded-2xl border border-white/25 bg-black/80 p-4 shadow-xl/30 backdrop-blur-3xl font-mono text-sm text-green-400 h-80 overflow-y-auto cursor-text transition-transform duration-300 hover:scale-[1.02] scroll-smooth"
+      onClick={() => inputRef.current?.focus()}
+    >
+      <div className="flex gap-2 mb-4">
+        <div className="w-3 h-3 rounded-full bg-red-500"></div>
+        <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+        <div className="w-3 h-3 rounded-full bg-green-500"></div>
+      </div>
+
+      <div className="space-y-2">
+        {history.map((item, index) => (
+          <div key={index}>
+            {item.command && (
+              <div className="flex gap-2 text-gray-300">
+                <span className="text-purple-400">guest@zv-dev:~$</span>
+                <span>{item.command}</span>
+              </div>
+            )}
+            <div className="text-green-300 mt-1">{item.output}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex gap-2 mt-2">
+        <span className="text-purple-400">guest@zv-dev:~$</span>
+        <input
+          ref={inputRef}
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleCommand}
+          className="bg-transparent border-none outline-none text-gray-300 flex-1 focus:ring-0"
+          autoFocus
+        />
+      </div>
+    </div>
+  );
 }
