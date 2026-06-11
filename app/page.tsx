@@ -29,6 +29,7 @@ import {
 import Image from "next/image"
 import { projects } from "@/data/projects"
 import { ProjectCard } from "@/components/ui/project-card"
+import GitHubActivity from "@/components/ui/github-activity"
 
 const row1 = [
   { Icon: SiJavascript, label: "JavaScript", color: "text-yellow-400" },
@@ -231,6 +232,15 @@ export default function Page() {
               {projects.map((project) => (
                 <ProjectCard key={project.title} project={project} />
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* GITHUB ACTIVITY SECTION (ÚJ) */}
+        <section className="w-full px-6 py-10 pb-20 md:pl-30">
+          <div className="mx-auto w-full max-w-6xl flex justify-center">
+            <div className="w-full max-w-3xl">
+              <GitHubActivity />
             </div>
           </div>
         </section>
