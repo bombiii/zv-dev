@@ -7,8 +7,6 @@ import { cv } from "@/data/cv"
 import { SiGithub } from "react-icons/si"
 
 export default function CV() {
-  const downloadCV = () => {}
-
   return (
     <AuroraBackground>
       <title>CV | Varga Zsombor</title>
@@ -29,12 +27,12 @@ export default function CV() {
                     {cv.title}
                   </p>
                 </div>
+                <a href="/cv.pdf" download="Varga_Zsombor_CV.pdf">
                 <button
-                  onClick={() => downloadCV()}
-                  className="shrink-0 rounded-xl border border-white/30 bg-white/10 px-4 py-2 text-sm font-medium text-indigo-700 transition-all duration-200 hover:bg-indigo-500/20 dark:border-white/10 dark:text-indigo-200 print:hidden"
-                >
+                  className="shrink-0 rounded-xl border border-white/30 bg-white/10 px-4 py-2 text-sm font-medium text-indigo-700 transition-all duration-200 hover:bg-indigo-500/20 dark:border-white/10 dark:text-indigo-200 print:hidden">
                   Letöltés / Nyomtatás
-                </button>
+                  </button>
+                </a>
               </div>
 
               <div className="mt-4 flex flex-wrap gap-4 border-t border-white/20 pt-4">
