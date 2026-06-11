@@ -119,7 +119,6 @@ export default function Terminal() {
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleCommand}
           className="bg-transparent border-none outline-none text-gray-300 flex-1 focus:ring-0"
-          autoFocus
         />
       </div>
     </div>
